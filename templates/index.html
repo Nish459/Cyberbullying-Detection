@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Toxicity Analyser</title>
+</head>
+<body class="bg-slate-900">
+    <div class="flex justify-center align-middle">
+        <h1 class="text-slate-100 mt-[50px] text-[60px]">Toxicity Analyser</h1>
+    </div>
+    <div class="mt-[100px]">
+        <form action = "/equ" method="POST" class="grid justify-center align-center m-10">
+            <div class="flex justify-center align-center ">
+                <label for="usr" class="mr-[70px] text-lg text-slate-100">Enter comment:</label>
+                <input type="text" class="border-none p-3 w-[20rem] bg-slate-300 rounded outline-none" id="usr arg0" name="arg0" >
+            </div>
+
+            <div class="flex justify-center align-middle mt-[50px]">
+                <button  class="bg-slate-400 p-4 w-[10em]  text-xl text-slate-900 font-medium rounded">Submit</button>
+                
+            </div>
+
+            <div class="">
+                <!-- yaha par output dikehga -->
+                  <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+                  <textarea class="mt-7 w-[530px] pt-2 bg-slate-300 text-2xl rounded outline-none" id="exampleFormControlTextarea1" rows="5" readonly>
+                    Is this considered bullying?
+                    {% if name %}{{name}}
+                    {% endif %}
+                  </textarea>
+            </div >
+        </form>
+    </div>
+</body>
+</html>
